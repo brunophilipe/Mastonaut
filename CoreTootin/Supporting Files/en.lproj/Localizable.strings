@@ -1,0 +1,184 @@
+/* 
+  Localizable.strings
+  Mastonaut
+
+  Created by Bruno Philipe on 08.02.19.
+  Mastonaut - Mastodon Client for Mac
+  Copyright © 2019 Bruno Philipe.
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+*/
+
+"Mastonaut — No Account Selected" = "Mastonaut — No Account Selected";
+"Failed authorization from “%@”: Could not login." = "Failed authorization from “%@”: Could not login.";
+"Failed authorization from “%@”: Could not fetch user." = "Failed authorization from “%@”: Could not fetch user.";
+"Boost this toot" = "Boost this toot";
+"This toot can not be boosted because it is private." = "This toot can not be boosted because it is private.";
+"This toot can not be boosted because it is a direct message." = "This toot can not be boosted because it is a direct message.";
+"%@ years ago" = "%@ years ago";
+"Last year" = "Last year";
+"%@ months ago" = "%@ months ago";
+"Last month" = "Last month";
+"%@ weeks ago" = "%@ weeks ago";
+"Last week" = "Last week";
+"%@ days ago" = "%@ days ago";
+"Yesterday" = "Yesterday";
+"%@ hours ago" = "%@ hours ago";
+"An hour ago" = "An hour ago";
+"%@ minutes ago" = "%@ minutes ago";
+"A minute ago" = "A minute ago";
+"%@ seconds ago" = "%@ seconds ago";
+"%@ followed you" = "%@ followed you";
+"%@ boosted" = "%@ boosted";
+"%@ boosted your toot" = "%@ boosted your toot";
+"%@ favorited" = "%@ favorited";
+"%@ favorited your toot" = "%@ favorited your toot";
+"%@ mentioned" = "%@ mentioned";
+"%@ mentioned you" = "%@ mentioned you";
+"one attachment" = "one attachment";
+"%@ attachments" = "%@ attachments";
+"on %@" = "on %@";
+"Version: %@ (%@)" = "Version: %@ (%@)";
+"Remove this Column" = "Remove this Column";
+"Switch to Next Account" = "Switch to Next Account";
+"Switch to Previous Account" = "Switch to Previous Account";
+"Please Select…" = "Please Select…";
+"Add Account…" = "Add Account…";
+"Home" = "Home";
+"Local Timeline" = "Local Timeline";
+"Public Timeline" = "Public Timeline";
+"Notifications" = "Notifications";
+"Select one or more files to upload and attach to your status." = "Select one or more files to upload and attach to your status.";
+"Attach" = "Attach";
+"Post to public timelines." = "Post to public timelines.";
+"Do not post to public timelines." = "Do not post to public timelines.";
+"Post to followers only. Attention: If your account is not locked, anyone can follow you to view your follower-only posts." = "Post to followers only. Attention: If your account is not locked, anyone can follow you to view your follower-only posts.";
+"This toot will only be sent to the mentioned users." = "This toot will only be sent to the mentioned users.";
+"Content Hidden: Click warning button :warning_button: below to toggle display." = "Content Hidden: Click warning button :warning_button: below to toggle display.";
+"Media Hidden: Click visibility button below to toggle display." = "Media Hidden: Click visibility button below to toggle display.";
+"Removing this account will cause its credentials to be deleted. In order to use this account with Mastonaut in the future you will have to login once again. Do you wish to proceed?" = "Removing this account will cause its credentials to be deleted. In order to use this account with Mastonaut in the future you will have to login once again. Do you wish to proceed?";
+"Attention" = "Attention";
+"Proceed" = "Proceed";
+"Upload" = "Upload";
+"Cancel" = "Cancel";
+"Error" = "Error";
+"OK" = "OK";
+"Try Again" = "Try Again";
+"Save Changes" = "Save Changes";
+"Discard Changes" = "Discard Changes";
+"Could not fetch new entries: %@" = "Could not fetch new entries: %@";
+"Select an image to upload." = "Select an image to upload.";
+"Unsaved changes" = "Unsaved changes";
+"A poll has ended" = "A poll has ended";
+"Select Account…" = "Select Account…";
+"Log In" = "Log In";
+
+"View Profile" = "View Profile";
+"Open Profile in Browser" = "Open Profile in Browser";
+"View Favorites" = "View Favorites";
+"Favorites" = "Favorites";
+"Bookmarked Tags" = "Bookmarked Tags";
+
+"Follow" = "Follow";
+"Unfollow" = "Unfollow";
+"Block" = "Block";
+"Unblock" = "Unblock";
+"Mute" = "Mute";
+"Unmute" = "Unmute";
+"Delete" = "Delete";
+"Delete & Re-draft" = "Delete & Re-draft";
+
+"instance.info.no-info" = "This website appears to be a Mastodon instance, however fetching information was not possible. This may happen if the instance has the “whitelisted federation” mode enabled. If you're confident this is the Mastodon instance you wish to use, click Next.";
+
+"status.poll.ends" = "Poll ends:";
+"status.poll.ended" = "Poll ended:";
+"status.poll.vote" = "One vote";
+"status.poll.votes" = "%@ votes";
+
+"status.context.boost" = "%@ boosted";
+"status.context.thread" = "continuing from another toot…";
+"status.context.reply" = "replying to another toot…";
+"status.context.pinned" = "pinned toot";
+
+"status.action.reblog" = "Boost Toot";
+"status.action.reblog.undo" = "Unboost Toot";
+"status.action.favorite" = "Favorite Toot";
+"status.action.favorite.undo" = "Unfavorite Toot";
+"status.action.media" = "Reveal Attachments";
+"status.action.media.undo" = "Hide Attachments";
+"status.action.content" = "Reveal CW Content";
+"status.action.content.undo" = "Hide CW Content";
+"status.action.media.open" = "Open Media";
+"status.action.media.close" = "Close Media";
+
+"dialog.reauth.title" = "Account needs new credentials.";
+"dialog.reauth.message" = "The account ‘%@’ has had its credentials become stale or invalidated, and it will not work correctly until you login again. Go to the Accounts Preferences to continue.";
+"dialog.reauth.proceed" = "Open Accounts Preferences";
+"dialog.reauth.cancel" = "Not Now";
+
+"dialog.reupload.title" = "Re-upload all attachments?";
+"dialog.reupload.message" = "Changing accounts now will require all attachments to be re-uploaded for the chosen account. Do you want to proceed?";
+"dialog.reupload.proceed" = "Change Account and Re-upload";
+"dialog.reupload.cancel" = "Don't Change Account";
+
+"dialog.filter.delete.confirmation" = "Are you sure you want to delete this filter?";
+"dialog.filter.delete.error" = "There was an error deleting this filter: %@";
+
+"relationship.follower" = "✓ This user follows you.";
+"relationship.mutual" = "✓ You both follow each other.";
+"relationship.blocked" = "✗ You have blocked this user.";
+"relationship.muted" = "You have muted this user.";
+"relationship.creator" = "✦ Creator of this very app.";
+
+"visibility.public" = "Public";
+"visibility.unlisted" = "Unlisted";
+"visibility.private" = "Followers Only";
+"visibility.direct" = "Direct";
+
+// Errors:
+"instance.badDomain" = "The input domain is not valid: %@";
+"instance.clientError" = "The server responded with an unexpected error: %@";
+
+"interaction.status" = "Error interacting with status:";
+"interaction.notification" = "Error interacting with notification:";
+
+"compose.attachment.upload.noknownuti" = "The file “%@” is of an unknown format. Please try attaching the file again after converting it for one of the following formats: %@";
+"compose.attachment.upload.badresizeencode" = "The file “%@” seems to be an image file, but parsing it for resizing failed. Please resize it manually and attach it again. Maximum allowed image size: %@ megapixels (%@ × %@)";
+"compose.attachment.encode" = "Encoding the file “%@” for uploading failed. Error message: %@";
+"compose.attachment.server" = "The file “%@” was rejected by the server. Error message: %@";
+"compose.attachment.metadata.corrupted" = "The file “%@” could not be opened for parsing. File might be corrupted.";
+"compose.attachment.metadata.unknownformat" = "The file “%@” could not be opened for parsing. Unknown file type.";
+"compose.attachment.metadata.notfile" = "The file “%@” could not be opened for parsing. Remote files and folders are not supported.";
+
+"error.network" = "Network Error: %@";
+"error.migration.title" = "There was a problem migrating accounts";
+"error.migration.message" = "Unfortunately Mastonaut was not able to migrate all your logged-in accounts to the latest storage model. This means you will not be able to use these accounts until you re-authorize them again. Please go to Account Settings to proceed.\n\nAccounts affected:\n%@\n\n";
+"error.migration.button.accountsettings" = "Account Settings";
+"error.migration.button.moreinfo" = "More Information";
+
+"client.badUrl" = "The URL provided to the server was malformed.";
+"client.badJson" = "The request body provided to the server was malformed.";
+"client.badModel" = "The response body provided by the server could not be parsed.";
+"client.badStatus" = "Bad status: %@";
+"client.server" = "Server error: %@";
+
+"preferences.account.unsavedChanges" = "Changes you made to this account were not saved. How do you wish to proceed?";
+"preferences.account.failedSave" = "Could not save changes";
+"preferences.account.busy" = "A task is already running";
+"preferences.account.couldNotLoad" = "Could not load account details.";
+"preferences.account.login" = "This account needs new credentials. Please log in again.";
+"preferences.account.noSelection" = "No account selected.";
+
+"authorization.title" = "Could not authorize";
+"authorization.clientRegistration" = "The server “%@” has refused registration of a REST client. %@";
+"authorization.unknown" = "Unknown authorization";
+
+"account.notFound" = "No accounts matching %@ found.";

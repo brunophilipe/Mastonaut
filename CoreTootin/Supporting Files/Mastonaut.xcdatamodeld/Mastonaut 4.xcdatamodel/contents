@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14903" systemVersion="18G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AccountOrder" representedClassName="AccountOrder" syncable="YES" codeGenerationType="class">
+        <relationship name="accounts" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="AuthorizedAccount" inverseName="order" inverseEntity="AuthorizedAccount"/>
+    </entity>
+    <entity name="AccountPreferences" representedClassName="AccountPreferences" syncable="YES" codeGenerationType="class">
+        <attribute name="showNotificationDetails" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="showNotifications" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="account" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AuthorizedAccount" inverseName="accountPreferences" inverseEntity="AuthorizedAccount"/>
+    </entity>
+    <entity name="AccountReference" representedClassName="AccountReference" syncable="YES" codeGenerationType="class">
+        <attribute name="avatarURL" optional="YES" attributeType="URI"/>
+        <attribute name="host" attributeType="String"/>
+        <attribute name="identifier" attributeType="String"/>
+        <attribute name="isBlocked" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="isFollower" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="isFollowing" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="isMuted" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="username" attributeType="String"/>
+        <relationship name="authorizedAccount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AuthorizedAccount" inverseName="relationships" inverseEntity="AuthorizedAccount"/>
+    </entity>
+    <entity name="AuthorizedAccount" representedClassName="AuthorizedAccount" syncable="YES" codeGenerationType="class">
+        <attribute name="accessTokenType" attributeType="String"/>
+        <attribute name="account" attributeType="String"/>
+        <attribute name="avatarURL" optional="YES" attributeType="URI"/>
+        <attribute name="baseDomain" attributeType="String"/>
+        <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="displayName" attributeType="String"/>
+        <attribute name="needsAuthorization" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="uri" optional="YES" attributeType="String"/>
+        <attribute name="username" attributeType="String"/>
+        <attribute name="uuidString" attributeType="String"/>
+        <relationship name="accountPreferences" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="AccountPreferences" inverseName="account" inverseEntity="AccountPreferences"/>
+        <relationship name="order" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AccountOrder" inverseName="accounts" inverseEntity="AccountOrder"/>
+        <relationship name="relationships" toMany="YES" deletionRule="Cascade" destinationEntity="AccountReference" inverseName="authorizedAccount" inverseEntity="AccountReference"/>
+    </entity>
+    <fetchRequest name="UnreferencedAccounts" entity="AccountReference" predicateString="isFollower == 0 AND isFollowing == 0 AND isBlocked == 0 AND isMuted == 0" includesPendingChanges="YES"/>
+    <elements>
+        <element name="AccountOrder" positionX="-66.26171875" positionY="-144.73828125" width="128" height="58"/>
+        <element name="AccountPreferences" positionX="54" positionY="9" width="128" height="88"/>
+        <element name="AccountReference" positionX="181.12890625" positionY="57.03515625" width="128" height="178"/>
+        <element name="AuthorizedAccount" positionX="-63" positionY="-18" width="128" height="238"/>
+    </elements>
+</model>

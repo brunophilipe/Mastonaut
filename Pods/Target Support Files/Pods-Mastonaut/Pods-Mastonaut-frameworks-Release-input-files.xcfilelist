@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-Mastonaut/Pods-Mastonaut-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework
+${BUILT_PRODUCTS_DIR}/MastodonKit/MastodonKit.framework
+${BUILT_PRODUCTS_DIR}/SVGKit/SVGKit.framework
+${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework

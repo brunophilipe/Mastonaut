@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14868" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14868"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AccountAvatarItem" customModule="Mastonaut" customModuleProvider="target">
+            <connections>
+                <outlet property="avatarImageView" destination="acO-3d-4yL" id="x4r-a9-52S"/>
+                <outlet property="shortcutLabel" destination="i2T-Ux-d3c" id="1To-f0-DEd"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView translatesAutoresizingMaskIntoConstraints="NO" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="99"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="IUJ-lq-Aea" customClass="BorderView" customModule="CoreTootin">
+                    <rect key="frame" x="6" y="24" width="68" height="68"/>
+                    <subviews>
+                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="acO-3d-4yL">
+                            <rect key="frame" x="0.0" y="0.0" width="68" height="68"/>
+                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="missing" id="G9S-KC-HkO"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="68" id="51y-Ol-tWy"/>
+                        <constraint firstItem="acO-3d-4yL" firstAttribute="top" secondItem="IUJ-lq-Aea" secondAttribute="top" id="VZW-iC-dgj"/>
+                        <constraint firstAttribute="trailing" secondItem="acO-3d-4yL" secondAttribute="trailing" id="Wde-Id-xky"/>
+                        <constraint firstItem="acO-3d-4yL" firstAttribute="leading" secondItem="IUJ-lq-Aea" secondAttribute="leading" id="ilf-oQ-llx"/>
+                        <constraint firstAttribute="bottom" secondItem="acO-3d-4yL" secondAttribute="bottom" id="ntV-h4-OgM"/>
+                        <constraint firstAttribute="height" constant="68" id="omP-Ar-AAh"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" verticalCompressionResistancePriority="746" translatesAutoresizingMaskIntoConstraints="NO" id="i2T-Ux-d3c">
+                    <rect key="frame" x="27" y="4" width="26" height="16"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="⌘1" id="ifN-0j-Nq3">
+                        <font key="font" metaFont="systemBold"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IUJ-lq-Aea" secondAttribute="trailing" constant="6" id="5UD-bb-K0D"/>
+                <constraint firstItem="i2T-Ux-d3c" firstAttribute="top" secondItem="IUJ-lq-Aea" secondAttribute="bottom" constant="4" id="Bee-eL-FXS"/>
+                <constraint firstItem="IUJ-lq-Aea" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="6" id="EXf-eL-UFf"/>
+                <constraint firstItem="IUJ-lq-Aea" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="NvR-bl-vvI"/>
+                <constraint firstItem="i2T-Ux-d3c" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="f0I-Hl-GeB"/>
+                <constraint firstAttribute="bottom" secondItem="i2T-Ux-d3c" secondAttribute="bottom" constant="4" id="gVQ-f0-wh4"/>
+                <constraint firstItem="IUJ-lq-Aea" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="6" id="x7T-JI-dWD"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="175"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="missing" width="400" height="400"/>
+    </resources>
+</document>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ComposerPollViewController" customModule="Mastonaut" customModuleProvider="target">
+            <connections>
+                <outlet property="choiceCountPopUpButton" destination="7qL-La-Xj7" id="3Ka-VJ-o2C"/>
+                <outlet property="durationPopUpButton" destination="bVu-U1-0sv" id="UjW-NQ-FIh"/>
+                <outlet property="stackView" destination="50I-pg-MCh" id="aon-4z-sJr"/>
+                <outlet property="view" destination="50I-pg-MCh" id="XHU-jF-jqP"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <stackView distribution="equalSpacing" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="50I-pg-MCh">
+            <rect key="frame" x="0.0" y="0.0" width="510" height="142"/>
+            <subviews>
+                <stackView distribution="fill" orientation="horizontal" alignment="firstBaseline" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="23r-bA-KjV">
+                    <rect key="frame" x="0.0" y="60" width="330" height="22"/>
+                    <subviews>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3H6-OQ-nD4">
+                            <rect key="frame" x="0.0" y="-1" width="100" height="23"/>
+                            <buttonCell key="cell" type="roundTextured" title="Add Option" bezelStyle="texturedRounded" image="NSAddTemplate" imagePosition="leading" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gZc-YD-JvF">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="addOption:" target="-2" id="kWY-F3-Kcd"/>
+                                <binding destination="-2" name="enabled" keyPath="canAddOptions" id="6hV-si-2DF"/>
+                            </connections>
+                        </button>
+                        <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7qL-La-Xj7">
+                            <rect key="frame" x="108" y="-1" width="120" height="23"/>
+                            <popUpButtonCell key="cell" type="roundTextured" title="Single Choice" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="6co-EI-EzT" id="YLn-xN-PiZ">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="menu"/>
+                                <menu key="menu" id="2YE-My-PzR">
+                                    <items>
+                                        <menuItem title="Single Choice" state="on" id="6co-EI-EzT">
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="representedObject" value="NO"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </menuItem>
+                                        <menuItem title="Multiple Choice" id="rCV-zU-vSQ">
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="representedObject" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </popUpButtonCell>
+                        </popUpButton>
+                        <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bVu-U1-0sv">
+                            <rect key="frame" x="236" y="-1" width="94" height="23"/>
+                            <popUpButtonCell key="cell" type="roundTextured" title="30 Minutes" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="qI3-qI-j5k" id="wLt-MT-VQO">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="menu"/>
+                                <menu key="menu" id="mhN-Is-yag">
+                                    <items>
+                                        <menuItem title="30 Minutes" state="on" id="qI3-qI-j5k"/>
+                                    </items>
+                                </menu>
+                            </popUpButtonCell>
+                        </popUpButton>
+                    </subviews>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
+            </subviews>
+            <visibilityPriorities>
+                <integer value="1000"/>
+            </visibilityPriorities>
+            <customSpacing>
+                <real value="3.4028234663852886e+38"/>
+            </customSpacing>
+            <point key="canvasLocation" x="108" y="68"/>
+        </stackView>
+    </objects>
+    <resources>
+        <image name="NSAddTemplate" width="11" height="11"/>
+    </resources>
+</document>

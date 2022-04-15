@@ -1,0 +1,3 @@
+[submodule "Dependencies/MastodonKit"]
+	path = Dependencies/MastodonKit
+	url = git@github.com:brunophilipe/MastodonKit.git

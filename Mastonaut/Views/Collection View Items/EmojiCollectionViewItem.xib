@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17132" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17132"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="EmojiCollectionViewItem" customModule="Mastonaut" customModuleProvider="target">
+            <connections>
+                <outlet property="animatedImageView" destination="x6Q-9f-2Fv" id="D2e-Kc-hs5"/>
+                <outlet property="backgroundBox" destination="elJ-Lg-tAM" id="sjb-mD-RWu"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box hidden="YES" boxType="custom" borderType="none" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="elJ-Lg-tAM">
+                    <rect key="frame" x="1" y="1" width="30" height="30"/>
+                    <view key="contentView" id="REq-Pt-EJo">
+                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <color key="borderColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="fillColor" name="selectedControlColor" catalog="System" colorSpace="catalog"/>
+                </box>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="x6Q-9f-2Fv" customClass="AnimatedImageView" customModule="Mastonaut" customModuleProvider="target">
+                    <rect key="frame" x="2" y="2" width="28" height="28"/>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="elJ-Lg-tAM" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="1" id="2k3-hz-GwE"/>
+                <constraint firstAttribute="trailing" secondItem="x6Q-9f-2Fv" secondAttribute="trailing" constant="2" id="3pV-lD-ga2"/>
+                <constraint firstItem="elJ-Lg-tAM" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="1" id="Tz2-y7-hsx"/>
+                <constraint firstAttribute="trailing" secondItem="elJ-Lg-tAM" secondAttribute="trailing" constant="1" id="Y0P-bg-Kus"/>
+                <constraint firstAttribute="bottom" secondItem="elJ-Lg-tAM" secondAttribute="bottom" constant="1" id="rD9-1T-RsS"/>
+                <constraint firstItem="x6Q-9f-2Fv" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="2" id="rzm-hc-sp8"/>
+                <constraint firstAttribute="bottom" secondItem="x6Q-9f-2Fv" secondAttribute="bottom" constant="2" id="wde-Zs-0xe"/>
+                <constraint firstItem="x6Q-9f-2Fv" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="2" id="z4c-mP-Q5p"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="154"/>
+        </customView>
+    </objects>
+</document>

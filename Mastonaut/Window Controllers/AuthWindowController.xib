@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AuthWindowController" customModule="Mastonaut" customModuleProvider="target">
+            <connections>
+                <outlet property="loadingIndicator" destination="wsy-Bf-YMD" id="VIN-CI-Ohx"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="OAuth Authorization" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <rect key="contentRect" x="397" y="137" width="360" height="81"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
+            <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="360" height="81"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="avJ-wh-0vO">
+                        <rect key="frame" x="14" y="23" width="82" height="32"/>
+                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VSM-jr-KAC">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="cancel:" target="-2" id="98d-o7-boH"/>
+                        </connections>
+                    </button>
+                    <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="BzY-Q6-gNq">
+                        <rect key="frame" x="120" y="24" width="222" height="34"/>
+                        <textFieldCell key="cell" alignment="right" title="This panel will automatically close once authorization finalizes." id="y3F-GI-CEk">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="wsy-Bf-YMD">
+                        <rect key="frame" x="98" y="33" width="16" height="16"/>
+                    </progressIndicator>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="BzY-Q6-gNq" secondAttribute="trailing" constant="20" id="3mo-sL-nab"/>
+                    <constraint firstItem="wsy-Bf-YMD" firstAttribute="centerY" secondItem="avJ-wh-0vO" secondAttribute="centerY" id="J5Q-ov-cnt"/>
+                    <constraint firstItem="wsy-Bf-YMD" firstAttribute="leading" secondItem="avJ-wh-0vO" secondAttribute="trailing" constant="8" id="Pek-OH-Ske"/>
+                    <constraint firstItem="avJ-wh-0vO" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="30" id="S3E-Rq-3L2"/>
+                    <constraint firstItem="BzY-Q6-gNq" firstAttribute="leading" secondItem="wsy-Bf-YMD" secondAttribute="trailing" constant="8" id="Xev-sg-Boc"/>
+                    <constraint firstItem="BzY-Q6-gNq" firstAttribute="centerY" secondItem="avJ-wh-0vO" secondAttribute="centerY" id="njm-Ub-ByJ"/>
+                    <constraint firstAttribute="bottom" secondItem="avJ-wh-0vO" secondAttribute="bottom" constant="30" id="wVV-yB-qc9"/>
+                    <constraint firstItem="avJ-wh-0vO" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="y4I-Yd-qep"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="146.5"/>
+        </window>
+    </objects>
+</document>

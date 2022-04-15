@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16097" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AttachmentItem" customModule="CoreTootin" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionProgressIndicator" destination="Avu-Vf-eLR" id="nfm-I7-fM5"/>
+                <outlet property="failureIndicatorImageView" destination="0HM-ON-2en" id="5Iu-UC-1Si"/>
+                <outlet property="itemDetailContainer" destination="9gs-95-mMv" id="Rya-uY-tuD"/>
+                <outlet property="itemDetailIcon" destination="vyQ-Ag-VPy" id="Jto-bI-9KC"/>
+                <outlet property="itemDetailLabel" destination="MHx-qe-JQE" id="oO5-v2-ZLV"/>
+                <outlet property="itemImageView" destination="R3Y-7z-KHF" id="49F-ik-Axs"/>
+                <outlet property="progressIndicator" destination="hyE-15-S8X" id="Dg6-5q-cTz"/>
+                <outlet property="showDescriptionEditorButton" destination="vS6-a0-b8f" id="k6V-5O-v4q"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView wantsLayer="YES" id="Hz6-mo-xeY" customClass="NonVibrantView" customModule="CoreTootin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R3Y-7z-KHF" customClass="AttachmentImageView" customModule="CoreTootin" customModuleProvider="target">
+                    <rect key="frame" x="6" y="6" width="68" height="68"/>
+                    <subviews>
+                        <progressIndicator wantsLayer="YES" fixedFrame="YES" maxValue="100" indeterminate="YES" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="hyE-15-S8X">
+                            <rect key="frame" x="-3" y="55" width="74" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        </progressIndicator>
+                    </subviews>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customView>
+                <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X5n-Yt-caB" customClass="ShowOnHoverView" customModule="CoreTootin" customModuleProvider="target">
+                    <rect key="frame" x="6" y="6" width="68" height="68"/>
+                    <subviews>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="uLM-eZ-a42">
+                            <rect key="frame" x="0.0" y="0.0" width="20" height="18"/>
+                            <subviews>
+                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vyQ-Ag-VPy">
+                                    <rect key="frame" x="4" y="4" width="12" height="10"/>
+                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="tiny_camera" id="Fht-cO-lC1"/>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="KI4-hr-RKp"/>
+                                <constraint firstAttribute="height" constant="18" id="S0t-9M-Orf"/>
+                                <constraint firstItem="vyQ-Ag-VPy" firstAttribute="centerY" secondItem="uLM-eZ-a42" secondAttribute="centerY" id="b8f-Mh-Egm"/>
+                                <constraint firstItem="vyQ-Ag-VPy" firstAttribute="centerX" secondItem="uLM-eZ-a42" secondAttribute="centerX" id="cU9-gP-Af8"/>
+                            </constraints>
+                        </customView>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="9gs-95-mMv">
+                            <rect key="frame" x="20" y="0.0" width="48" height="18"/>
+                            <subviews>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MHx-qe-JQE">
+                                    <rect key="frame" x="1" y="4" width="46" height="11"/>
+                                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="88:88:88" id="FBF-Vd-iHD">
+                                        <font key="font" metaFont="miniSystem"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="18" id="Js3-XU-Znh"/>
+                                <constraint firstAttribute="trailing" secondItem="MHx-qe-JQE" secondAttribute="trailing" constant="3" id="OPE-Ff-AKQ"/>
+                                <constraint firstItem="MHx-qe-JQE" firstAttribute="centerY" secondItem="9gs-95-mMv" secondAttribute="centerY" id="VEV-6L-cJQ"/>
+                                <constraint firstItem="MHx-qe-JQE" firstAttribute="leading" secondItem="9gs-95-mMv" secondAttribute="leading" constant="3" id="un7-bV-oFh"/>
+                            </constraints>
+                        </customView>
+                        <button wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SED-Jx-DSf">
+                            <rect key="frame" x="34" y="18" width="34" height="50"/>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="bin" imagePosition="only" alignment="center" alternateImage="bin_alt" imageScaling="proportionallyDown" inset="2" id="I4Q-Jb-lvU">
+                                <behavior key="behavior" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="removeButtonClicked:" target="-2" id="l64-Bv-Rge"/>
+                            </connections>
+                        </button>
+                        <button wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vS6-a0-b8f">
+                            <rect key="frame" x="0.0" y="18" width="34" height="50"/>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="speech" imagePosition="overlaps" alignment="center" alternateImage="speech_alt" imageScaling="proportionallyDown" inset="2" id="ydV-Sc-OCQ">
+                                <behavior key="behavior" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="descriptionButtonClicked:" target="-2" id="a2q-En-XLt"/>
+                            </connections>
+                        </button>
+                        <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="Avu-Vf-eLR">
+                            <rect key="frame" x="9" y="35" width="16" height="16"/>
+                        </progressIndicator>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Avu-Vf-eLR" firstAttribute="centerX" secondItem="vS6-a0-b8f" secondAttribute="centerX" id="0dt-XZ-Qdf"/>
+                        <constraint firstItem="vS6-a0-b8f" firstAttribute="leading" secondItem="X5n-Yt-caB" secondAttribute="leading" id="10B-5T-YtQ"/>
+                        <constraint firstItem="SED-Jx-DSf" firstAttribute="leading" secondItem="vS6-a0-b8f" secondAttribute="trailing" id="8J2-kf-J0C"/>
+                        <constraint firstItem="Avu-Vf-eLR" firstAttribute="centerY" secondItem="vS6-a0-b8f" secondAttribute="centerY" id="BfY-uu-y0v"/>
+                        <constraint firstItem="vS6-a0-b8f" firstAttribute="top" secondItem="X5n-Yt-caB" secondAttribute="top" id="PXR-7C-4tQ"/>
+                        <constraint firstItem="9gs-95-mMv" firstAttribute="leading" secondItem="uLM-eZ-a42" secondAttribute="trailing" id="T6O-I9-axU"/>
+                        <constraint firstAttribute="bottom" secondItem="9gs-95-mMv" secondAttribute="bottom" id="TYp-My-fkX"/>
+                        <constraint firstItem="uLM-eZ-a42" firstAttribute="top" secondItem="vS6-a0-b8f" secondAttribute="bottom" id="Xsy-u0-6Uw"/>
+                        <constraint firstItem="uLM-eZ-a42" firstAttribute="top" secondItem="SED-Jx-DSf" secondAttribute="bottom" id="ZE3-sv-kv0"/>
+                        <constraint firstAttribute="trailing" secondItem="SED-Jx-DSf" secondAttribute="trailing" id="h4j-PD-XfM"/>
+                        <constraint firstAttribute="trailing" secondItem="9gs-95-mMv" secondAttribute="trailing" id="hBM-I6-Ds8"/>
+                        <constraint firstItem="SED-Jx-DSf" firstAttribute="width" secondItem="vS6-a0-b8f" secondAttribute="width" id="iij-OY-qOi"/>
+                        <constraint firstItem="uLM-eZ-a42" firstAttribute="leading" secondItem="X5n-Yt-caB" secondAttribute="leading" id="u2n-gd-0gE"/>
+                        <constraint firstItem="SED-Jx-DSf" firstAttribute="top" secondItem="X5n-Yt-caB" secondAttribute="top" id="uCo-L9-yMZ"/>
+                        <constraint firstItem="SED-Jx-DSf" firstAttribute="leading" secondItem="vS6-a0-b8f" secondAttribute="trailing" id="vW6-kb-nIS"/>
+                        <constraint firstAttribute="bottom" secondItem="uLM-eZ-a42" secondAttribute="bottom" id="w4D-xo-hVd"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.74906537576687116" colorSpace="custom" customColorSpace="displayP3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customView>
+                <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0HM-ON-2en">
+                    <rect key="frame" x="2" y="2" width="76" height="76"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="failure_indicator" id="7VO-PN-c2d"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="R3Y-7z-KHF" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="6" id="6b3-YE-lH7"/>
+                <constraint firstItem="R3Y-7z-KHF" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="6" id="MRs-RY-IK5"/>
+                <constraint firstAttribute="trailing" secondItem="R3Y-7z-KHF" secondAttribute="trailing" constant="6" id="Mfm-3r-Iem"/>
+                <constraint firstItem="0HM-ON-2en" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="NNd-u7-qYB"/>
+                <constraint firstAttribute="trailing" secondItem="X5n-Yt-caB" secondAttribute="trailing" constant="6" id="Qqr-Uy-L5m"/>
+                <constraint firstItem="0HM-ON-2en" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="Ypo-zz-aVa"/>
+                <constraint firstItem="X5n-Yt-caB" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="6" id="fHA-d4-7Yp"/>
+                <constraint firstItem="X5n-Yt-caB" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="6" id="iCs-ro-3vS"/>
+                <constraint firstAttribute="bottom" secondItem="R3Y-7z-KHF" secondAttribute="bottom" constant="6" id="oqz-GD-zED"/>
+                <constraint firstAttribute="bottom" secondItem="X5n-Yt-caB" secondAttribute="bottom" constant="6" id="sL0-DL-GVB"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="154"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="bin" width="16" height="18"/>
+        <image name="bin_alt" width="16" height="18"/>
+        <image name="failure_indicator" width="76" height="76"/>
+        <image name="speech" width="16" height="18"/>
+        <image name="speech_alt" width="16" height="18"/>
+        <image name="tiny_camera" width="12" height="10"/>
+    </resources>
+</document>

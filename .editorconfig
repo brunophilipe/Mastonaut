@@ -1,0 +1,5 @@
+# For GitHub diff views
+[*.{swift,c,h,m,mm}]
+charset = utf-8
+indent_style = tab
+indent_size = 4

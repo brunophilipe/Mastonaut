@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14868" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14868"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AttachmentViewController" customModule="Mastonaut" customModuleProvider="target">
+            <connections>
+                <outlet property="firstImageView" destination="xzN-O3-iKz" id="U5E-dW-Hzi"/>
+                <outlet property="fourthImageView" destination="emp-qD-nW5" id="xTp-Me-eru"/>
+                <outlet property="moreLabel" destination="eQv-Wo-Fcz" id="M6r-Kp-HxA"/>
+                <outlet property="secondImageView" destination="Fhr-hL-aOl" id="wq3-4V-1Rp"/>
+                <outlet property="thirdImageView" destination="DjM-Md-B0u" id="eUf-ur-cLz"/>
+                <outlet property="view" destination="Lbu-9v-r4a" id="Eeu-F1-Rq2"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Lbu-9v-r4a">
+            <rect key="frame" x="0.0" y="0.0" width="408" height="248"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="ndF-1P-hGB">
+                    <rect key="frame" x="0.0" y="128" width="408" height="120"/>
+                    <subviews>
+                        <customView horizontalHuggingPriority="261" verticalHuggingPriority="761" horizontalCompressionResistancePriority="261" verticalCompressionResistancePriority="761" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="120" translatesAutoresizingMaskIntoConstraints="NO" id="xzN-O3-iKz" customClass="AttachmentImageView" customModule="CoreTootin">
+                            <rect key="frame" x="0.0" y="0.0" width="200" height="120"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="missing"/>
+                            </userDefinedRuntimeAttributes>
+                        </customView>
+                        <customView horizontalHuggingPriority="263" verticalHuggingPriority="763" horizontalCompressionResistancePriority="263" verticalCompressionResistancePriority="763" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="120" translatesAutoresizingMaskIntoConstraints="NO" id="Fhr-hL-aOl" customClass="AttachmentImageView" customModule="CoreTootin">
+                            <rect key="frame" x="208" y="0.0" width="200" height="120"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="missing"/>
+                            </userDefinedRuntimeAttributes>
+                        </customView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="xzN-O3-iKz" firstAttribute="leading" secondItem="ndF-1P-hGB" secondAttribute="leading" id="1wT-ia-d89"/>
+                        <constraint firstItem="xzN-O3-iKz" firstAttribute="top" secondItem="ndF-1P-hGB" secondAttribute="top" id="2nb-Ow-aTP"/>
+                        <constraint firstAttribute="trailing" secondItem="Fhr-hL-aOl" secondAttribute="trailing" id="Hxb-vm-fbb"/>
+                        <constraint firstAttribute="bottom" secondItem="Fhr-hL-aOl" secondAttribute="bottom" id="KoF-Pa-sb6"/>
+                        <constraint firstItem="Fhr-hL-aOl" firstAttribute="top" secondItem="ndF-1P-hGB" secondAttribute="top" id="Waz-Vt-JtF"/>
+                        <constraint firstAttribute="bottom" secondItem="xzN-O3-iKz" secondAttribute="bottom" id="uos-Sw-pOd"/>
+                        <constraint firstItem="Fhr-hL-aOl" firstAttribute="leading" secondItem="xzN-O3-iKz" secondAttribute="trailing" constant="8" id="v6g-hu-0f4"/>
+                    </constraints>
+                </customView>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="1LR-e1-IDU">
+                    <rect key="frame" x="0.0" y="0.0" width="408" height="120"/>
+                    <subviews>
+                        <customView horizontalHuggingPriority="262" verticalHuggingPriority="762" horizontalCompressionResistancePriority="262" verticalCompressionResistancePriority="762" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="120" translatesAutoresizingMaskIntoConstraints="NO" id="DjM-Md-B0u" customClass="AttachmentImageView" customModule="CoreTootin">
+                            <rect key="frame" x="0.0" y="0.0" width="200" height="120"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="missing"/>
+                            </userDefinedRuntimeAttributes>
+                        </customView>
+                        <customView horizontalHuggingPriority="264" verticalHuggingPriority="764" horizontalCompressionResistancePriority="264" verticalCompressionResistancePriority="764" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="120" translatesAutoresizingMaskIntoConstraints="NO" id="emp-qD-nW5" customClass="AttachmentImageView" customModule="CoreTootin">
+                            <rect key="frame" x="208" y="0.0" width="200" height="120"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="exposureAdjust">
+                                    <real key="value" value="-5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="missing"/>
+                            </userDefinedRuntimeAttributes>
+                        </customView>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eQv-Wo-Fcz">
+                            <rect key="frame" x="283" y="39" width="50" height="43"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="+0" id="4rn-Ug-7EQ">
+                                <font key="font" metaFont="systemMedium" size="36"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="DjM-Md-B0u" firstAttribute="leading" secondItem="1LR-e1-IDU" secondAttribute="leading" id="3cb-2d-4ve"/>
+                        <constraint firstAttribute="bottom" secondItem="DjM-Md-B0u" secondAttribute="bottom" id="5lU-8O-isc"/>
+                        <constraint firstItem="DjM-Md-B0u" firstAttribute="top" secondItem="1LR-e1-IDU" secondAttribute="top" id="BZR-lr-4Lh"/>
+                        <constraint firstAttribute="bottom" secondItem="emp-qD-nW5" secondAttribute="bottom" id="Pe7-Ir-coU"/>
+                        <constraint firstItem="emp-qD-nW5" firstAttribute="top" secondItem="1LR-e1-IDU" secondAttribute="top" id="RJu-RS-1zu"/>
+                        <constraint firstItem="eQv-Wo-Fcz" firstAttribute="centerX" secondItem="emp-qD-nW5" secondAttribute="centerX" id="VFV-v9-5Bn"/>
+                        <constraint firstItem="eQv-Wo-Fcz" firstAttribute="centerY" secondItem="emp-qD-nW5" secondAttribute="centerY" id="mYi-Kp-KSt"/>
+                        <constraint firstItem="emp-qD-nW5" firstAttribute="leading" secondItem="DjM-Md-B0u" secondAttribute="trailing" constant="8" id="pO7-Nh-5mW"/>
+                        <constraint firstAttribute="trailing" secondItem="emp-qD-nW5" secondAttribute="trailing" id="rye-Gy-Ecs"/>
+                    </constraints>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ndF-1P-hGB" secondAttribute="trailing" id="9ht-nf-vpe"/>
+                <constraint firstItem="ndF-1P-hGB" firstAttribute="leading" secondItem="Lbu-9v-r4a" secondAttribute="leading" id="BYz-Ca-3J8"/>
+                <constraint firstAttribute="bottom" secondItem="1LR-e1-IDU" secondAttribute="bottom" id="DJy-P2-qPx"/>
+                <constraint firstItem="1LR-e1-IDU" firstAttribute="height" secondItem="ndF-1P-hGB" secondAttribute="height" id="KVm-Yg-ENY"/>
+                <constraint firstItem="1LR-e1-IDU" firstAttribute="leading" secondItem="Lbu-9v-r4a" secondAttribute="leading" id="O8y-Ep-tKM"/>
+                <constraint firstAttribute="trailing" secondItem="1LR-e1-IDU" secondAttribute="trailing" id="PrJ-wn-9nH"/>
+                <constraint firstItem="1LR-e1-IDU" firstAttribute="top" secondItem="ndF-1P-hGB" secondAttribute="bottom" constant="8" id="arH-Lf-eds"/>
+                <constraint firstItem="Fhr-hL-aOl" firstAttribute="width" secondItem="DjM-Md-B0u" secondAttribute="width" id="cPa-gr-w6B"/>
+                <constraint firstItem="ndF-1P-hGB" firstAttribute="top" secondItem="Lbu-9v-r4a" secondAttribute="top" id="kKN-vJ-fDd"/>
+                <constraint firstItem="DjM-Md-B0u" firstAttribute="width" secondItem="xzN-O3-iKz" secondAttribute="width" id="yAY-6l-2Gr"/>
+            </constraints>
+            <point key="canvasLocation" x="326" y="392"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="missing" width="400" height="400"/>
+    </resources>
+</document>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15400" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15400"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <tableCellView id="OC8-5j-g4S" customClass="AccountTableCellView" customModule="Mastonaut" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="235" height="54"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="Ij4-Bv-NSs" customClass="BorderView" customModule="CoreTootin">
+                    <rect key="frame" x="4" y="4" width="46" height="46"/>
+                    <subviews>
+                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DkQ-O4-hp6">
+                            <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
+                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="missing" id="TYq-go-wry"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="8Id-hG-DQT"/>
+                        <constraint firstAttribute="bottom" secondItem="DkQ-O4-hp6" secondAttribute="bottom" id="Ala-ay-ehH"/>
+                        <constraint firstAttribute="height" constant="46" id="Ce1-38-C0Y"/>
+                        <constraint firstItem="DkQ-O4-hp6" firstAttribute="leading" secondItem="Ij4-Bv-NSs" secondAttribute="leading" id="Q85-bB-c0g"/>
+                        <constraint firstAttribute="trailing" secondItem="DkQ-O4-hp6" secondAttribute="trailing" id="oIa-c9-rZz"/>
+                        <constraint firstItem="DkQ-O4-hp6" firstAttribute="top" secondItem="Ij4-Bv-NSs" secondAttribute="top" id="she-qS-LnU"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customView>
+                <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zOC-Ed-iia">
+                    <rect key="frame" x="56" y="4" width="173" height="46"/>
+                    <subviews>
+                        <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T0n-6w-NdZ">
+                            <rect key="frame" x="0.0" y="28" width="173" height="18"/>
+                            <subviews>
+                                <textField verticalHuggingPriority="749" horizontalCompressionResistancePriority="249" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="Frc-lQ-8IL" customClass="EmphasizedTextField">
+                                    <rect key="frame" x="-2" y="2" width="159" height="16"/>
+                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" title="John Appleseed" id="yuV-46-I1k">
+                                        <font key="font" metaFont="systemSemibold" size="13"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField horizontalHuggingPriority="252" verticalHuggingPriority="749" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="lQM-tf-vfu" customClass="EmphasizedTextField">
+                                    <rect key="frame" x="153" y="2" width="22" height="16"/>
+                                    <textFieldCell key="cell" lineBreakMode="clipping" title="⌘1" id="9yg-99-rvA">
+                                        <font key="font" metaFont="systemBold"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                            </subviews>
+                            <visibilityPriorities>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                            </visibilityPriorities>
+                            <customSpacing>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                            </customSpacing>
+                        </stackView>
+                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ZkD-ml-BAs">
+                            <rect key="frame" x="-2" y="14" width="87" height="14"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="john.appleseed" id="Nc0-gV-LOE">
+                                <font key="font" metaFont="systemMedium" size="11"/>
+                                <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="QxN-1X-KBN">
+                            <rect key="frame" x="-2" y="0.0" width="103" height="14"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="mastodon.example" id="Dgz-Ma-Mje">
+                                <font key="font" metaFont="smallSystem"/>
+                                <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="lQM-tf-vfu" secondAttribute="trailing" id="3c9-O2-edZ"/>
+                    </constraints>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NY0-7j-tPt">
+                    <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="failure_indicator_small" id="jzd-2w-fYD"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="NY0-7j-tPt" firstAttribute="bottom" secondItem="Ij4-Bv-NSs" secondAttribute="bottom" constant="4" id="0aA-AG-7ek"/>
+                <constraint firstItem="Ij4-Bv-NSs" firstAttribute="top" secondItem="OC8-5j-g4S" secondAttribute="top" constant="4" id="0h4-BL-znw"/>
+                <constraint firstItem="NY0-7j-tPt" firstAttribute="leading" secondItem="Ij4-Bv-NSs" secondAttribute="leading" constant="-4" id="8bQ-qg-9RJ"/>
+                <constraint firstItem="zOC-Ed-iia" firstAttribute="top" secondItem="Ij4-Bv-NSs" secondAttribute="top" id="A8e-cC-E64"/>
+                <constraint firstItem="zOC-Ed-iia" firstAttribute="leading" secondItem="Ij4-Bv-NSs" secondAttribute="trailing" constant="6" id="CKn-BU-8d0"/>
+                <constraint firstItem="NY0-7j-tPt" firstAttribute="trailing" secondItem="Ij4-Bv-NSs" secondAttribute="trailing" constant="4" id="Ccc-K1-mIM"/>
+                <constraint firstAttribute="trailing" secondItem="zOC-Ed-iia" secondAttribute="trailing" constant="6" id="JEy-8o-Pu0"/>
+                <constraint firstAttribute="bottom" secondItem="Ij4-Bv-NSs" secondAttribute="bottom" constant="4" id="PbN-pN-LGU"/>
+                <constraint firstItem="zOC-Ed-iia" firstAttribute="bottom" secondItem="Ij4-Bv-NSs" secondAttribute="bottom" id="Z8V-m7-UgM"/>
+                <constraint firstItem="Ij4-Bv-NSs" firstAttribute="leading" secondItem="OC8-5j-g4S" secondAttribute="leading" constant="4" id="h4E-ST-6Mw"/>
+                <constraint firstItem="NY0-7j-tPt" firstAttribute="top" secondItem="Ij4-Bv-NSs" secondAttribute="top" constant="-4" id="qdZ-fb-eUZ"/>
+            </constraints>
+            <connections>
+                <outlet property="accountLabel" destination="ZkD-ml-BAs" id="meN-jg-GP2"/>
+                <outlet property="avatarView" destination="DkQ-O4-hp6" id="ATt-UD-mgI"/>
+                <outlet property="instanceLabel" destination="QxN-1X-KBN" id="GoO-Ty-bhk"/>
+                <outlet property="issueIndicatorImageView" destination="NY0-7j-tPt" id="2RG-ku-r82"/>
+                <outlet property="nameLabel" destination="Frc-lQ-8IL" id="4P1-sd-RKc"/>
+                <outlet property="shortcutLabel" destination="lQM-tf-vfu" id="qsi-0b-XHj"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="154"/>
+        </tableCellView>
+    </objects>
+    <resources>
+        <image name="failure_indicator_small" width="54" height="54"/>
+        <image name="missing" width="400" height="400"/>
+    </resources>
+</document>

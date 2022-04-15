@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14868" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14868"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AttachmentViewController" customModule="Mastonaut" customModuleProvider="target">
+            <connections>
+                <outlet property="firstImageView" destination="gjo-CK-cis" id="9tQ-zK-PXT"/>
+                <outlet property="view" destination="Xbx-td-PpE" id="Z93-fI-Ckv"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView translatesAutoresizingMaskIntoConstraints="NO" id="Xbx-td-PpE">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+            <subviews>
+                <customView horizontalHuggingPriority="251" verticalHuggingPriority="751" horizontalCompressionResistancePriority="251" verticalCompressionResistancePriority="751" placeholderIntrinsicWidth="400" placeholderIntrinsicHeight="300" translatesAutoresizingMaskIntoConstraints="NO" id="gjo-CK-cis" customClass="AttachmentImageView" customModule="CoreTootin">
+                    <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="missing"/>
+                    </userDefinedRuntimeAttributes>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="gjo-CK-cis" secondAttribute="bottom" id="DWb-di-Ssv"/>
+                <constraint firstItem="gjo-CK-cis" firstAttribute="leading" secondItem="Xbx-td-PpE" secondAttribute="leading" id="QSS-gJ-RWO"/>
+                <constraint firstAttribute="trailing" secondItem="gjo-CK-cis" secondAttribute="trailing" id="sbK-QY-GUx"/>
+                <constraint firstItem="gjo-CK-cis" firstAttribute="top" secondItem="Xbx-td-PpE" secondAttribute="top" id="w21-ku-4gk"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="154"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="missing" width="400" height="400"/>
+    </resources>
+</document>

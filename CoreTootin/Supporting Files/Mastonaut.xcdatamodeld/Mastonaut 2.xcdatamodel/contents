@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18F203" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AccountOrder" representedClassName="AccountOrder" syncable="YES" codeGenerationType="class">
+        <relationship name="accounts" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="AuthorizedAccount" inverseName="order" inverseEntity="AuthorizedAccount" syncable="YES"/>
+    </entity>
+    <entity name="AccountReference" representedClassName="AccountReference" syncable="YES" codeGenerationType="class">
+        <attribute name="avatarURL" optional="YES" attributeType="URI" syncable="YES"/>
+        <attribute name="host" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" attributeType="String" syncable="YES"/>
+        <attribute name="isBlocked" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isFollower" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isFollowing" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isMuted" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="username" attributeType="String" syncable="YES"/>
+        <relationship name="authorizedAccount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AuthorizedAccount" inverseName="relationships" inverseEntity="AuthorizedAccount" syncable="YES"/>
+    </entity>
+    <entity name="AuthorizedAccount" representedClassName="AuthorizedAccount" syncable="YES" codeGenerationType="class">
+        <attribute name="accessTokenType" attributeType="String" syncable="YES"/>
+        <attribute name="account" attributeType="String" syncable="YES"/>
+        <attribute name="avatarURL" optional="YES" attributeType="URI" syncable="YES"/>
+        <attribute name="baseDomain" attributeType="String" syncable="YES"/>
+        <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="displayName" attributeType="String" syncable="YES"/>
+        <attribute name="uri" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" attributeType="String" syncable="YES"/>
+        <attribute name="uuidString" attributeType="String" syncable="YES"/>
+        <relationship name="order" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AccountOrder" inverseName="accounts" inverseEntity="AccountOrder" syncable="YES"/>
+        <relationship name="relationships" toMany="YES" deletionRule="Cascade" destinationEntity="AccountReference" inverseName="authorizedAccount" inverseEntity="AccountReference" syncable="YES"/>
+    </entity>
+    <fetchRequest name="UnreferencedAccounts" entity="AccountReference" predicateString="isFollower == 0 AND isFollowing == 0 AND isBlocked == 0 AND isMuted == 0" includesPendingChanges="YES"/>
+    <elements>
+        <element name="AccountOrder" positionX="-66.26171875" positionY="-144.73828125" width="128" height="58"/>
+        <element name="AccountReference" positionX="181.12890625" positionY="57.03515625" width="128" height="178"/>
+        <element name="AuthorizedAccount" positionX="-63" positionY="-18" width="128" height="210"/>
+    </elements>
+</model>

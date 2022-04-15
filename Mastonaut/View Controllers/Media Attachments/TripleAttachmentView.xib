@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14868" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14868"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AttachmentViewController" customModule="Mastonaut" customModuleProvider="target">
+            <connections>
+                <outlet property="firstImageView" destination="dcJ-p8-67I" id="Zk8-JY-IgJ"/>
+                <outlet property="secondImageView" destination="FTI-JH-dSf" id="ZUN-6Y-0xc"/>
+                <outlet property="thirdImageView" destination="43O-Vf-nR9" id="XQc-1r-oEw"/>
+                <outlet property="view" destination="c22-O7-iKe" id="ZjP-y3-ZWW"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="288" height="208"/>
+            <subviews>
+                <customView horizontalHuggingPriority="254" verticalHuggingPriority="754" horizontalCompressionResistancePriority="254" verticalCompressionResistancePriority="754" placeholderIntrinsicWidth="140" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="dcJ-p8-67I" customClass="AttachmentImageView" customModule="CoreTootin">
+                    <rect key="frame" x="0.0" y="0.0" width="140" height="208"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="missing"/>
+                    </userDefinedRuntimeAttributes>
+                </customView>
+                <customView horizontalHuggingPriority="255" verticalHuggingPriority="755" horizontalCompressionResistancePriority="255" verticalCompressionResistancePriority="755" placeholderIntrinsicWidth="140" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="FTI-JH-dSf" customClass="AttachmentImageView" customModule="CoreTootin">
+                    <rect key="frame" x="148" y="108" width="140" height="100"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="missing"/>
+                    </userDefinedRuntimeAttributes>
+                </customView>
+                <customView horizontalHuggingPriority="256" verticalHuggingPriority="756" horizontalCompressionResistancePriority="256" verticalCompressionResistancePriority="756" placeholderIntrinsicWidth="140" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="43O-Vf-nR9" customClass="AttachmentImageView" customModule="CoreTootin">
+                    <rect key="frame" x="148" y="0.0" width="140" height="100"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="missing"/>
+                    </userDefinedRuntimeAttributes>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="43O-Vf-nR9" firstAttribute="top" secondItem="FTI-JH-dSf" secondAttribute="bottom" constant="8" id="5EP-lq-4Oq"/>
+                <constraint firstItem="dcJ-p8-67I" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="CSr-1C-48a"/>
+                <constraint firstItem="FTI-JH-dSf" firstAttribute="leading" secondItem="dcJ-p8-67I" secondAttribute="trailing" constant="8" id="L39-K9-e0z"/>
+                <constraint firstAttribute="bottom" secondItem="43O-Vf-nR9" secondAttribute="bottom" id="Nla-Hd-vaP"/>
+                <constraint firstAttribute="bottom" secondItem="dcJ-p8-67I" secondAttribute="bottom" id="cYR-bj-Oi5"/>
+                <constraint firstItem="FTI-JH-dSf" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="gJ5-cq-lZj"/>
+                <constraint firstAttribute="trailing" secondItem="43O-Vf-nR9" secondAttribute="trailing" id="h3D-Gn-rbZ"/>
+                <constraint firstAttribute="trailing" secondItem="FTI-JH-dSf" secondAttribute="trailing" id="hm8-Qk-Tl3"/>
+                <constraint firstItem="FTI-JH-dSf" firstAttribute="height" secondItem="43O-Vf-nR9" secondAttribute="height" id="nEX-vE-llx"/>
+                <constraint firstItem="dcJ-p8-67I" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="nzt-UN-u2K"/>
+                <constraint firstItem="43O-Vf-nR9" firstAttribute="leading" secondItem="dcJ-p8-67I" secondAttribute="trailing" constant="8" id="vOc-j7-SFP"/>
+                <constraint firstItem="dcJ-p8-67I" firstAttribute="width" secondItem="FTI-JH-dSf" secondAttribute="width" id="xSS-Nb-rMO"/>
+            </constraints>
+            <point key="canvasLocation" x="266" y="112"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="missing" width="400" height="400"/>
+    </resources>
+</document>

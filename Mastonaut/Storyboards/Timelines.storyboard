@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17154" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="1kO-JB-WGR">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17154"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="8E9-fA-2g2">
+            <objects>
+                <windowController id="1kO-JB-WGR" customClass="TimelinesWindowController" customModule="Mastonaut" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" identifier="Timelines" title="Mastonaut — No Account Selected" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" animationBehavior="documentWindow" frameAutosaveName="" tabbingMode="disallowed" titleVisibility="hidden" id="yb1-gA-2HP" customClass="ToolbarWindow" customModule="Mastonaut" customModuleProvider="target">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowCollectionBehavior key="collectionBehavior" participatesInCycle="YES" fullScreenPrimary="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="185" y="471" width="420" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
+                        <value key="minSize" type="size" width="390" height="270"/>
+                        <toolbar key="toolbar" implicitIdentifier="46FC36BA-FC33-431D-ACB6-95A1A8B813E7" autosavesConfiguration="NO" allowsUserCustomization="NO" showsBaselineSeparator="NO" displayMode="iconOnly" sizeMode="regular" id="bub-io-aMI">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="ODx-zu-hUL"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="7DS-tT-Zd3"/>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="7DS-tT-Zd3"/>
+                            </defaultToolbarItems>
+                        </toolbar>
+                        <connections>
+                            <outlet property="delegate" destination="1kO-JB-WGR" id="SK2-eV-MuX"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <outlet property="newColumnMenu" destination="lnX-9v-O4K" id="3t4-8N-D3h"/>
+                        <segue destination="2dD-aR-FXP" kind="relationship" relationship="window.shadowedContentViewController" id="gqb-gs-UbL"/>
+                    </connections>
+                </windowController>
+                <customObject id="rMZ-vP-L5n" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <menu id="lnX-9v-O4K">
+                    <items>
+                        <menuItem title="Item 1" id="wCX-tE-37B">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                        <menuItem title="Item 2" id="Gs9-W5-n1n">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                        <menuItem title="Item 3" id="qI0-db-6OK">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                    </items>
+                </menu>
+            </objects>
+            <point key="canvasLocation" x="-42" y="-28"/>
+        </scene>
+        <!--Timelines Split View Controller-->
+        <scene sceneID="1Qr-kQ-TaV">
+            <objects>
+                <splitViewController id="2dD-aR-FXP" customClass="TimelinesSplitViewController" customModule="Mastonaut" customModuleProvider="target" sceneMemberID="viewController">
+                    <splitViewItems>
+                        <splitViewItem id="TwV-ls-Io5"/>
+                        <splitViewItem collapsed="YES" holdingPriority="249" id="ye5-6k-pSV"/>
+                    </splitViewItems>
+                    <splitView key="splitView" autosaveName="TimelinesSplitView" dividerStyle="paneSplitter" vertical="YES" id="AeU-qU-mIU">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <outlet property="delegate" destination="2dD-aR-FXP" id="qmB-h6-vkY"/>
+                        </connections>
+                    </splitView>
+                    <connections>
+                        <segue destination="XRM-gv-OfH" kind="relationship" relationship="splitItems" id="aX1-ma-9R9"/>
+                        <segue destination="Giv-Ao-Iyi" kind="relationship" relationship="splitItems" id="uD8-4z-EDx"/>
+                    </connections>
+                </splitViewController>
+                <customObject id="SZG-yV-mLQ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="626" y="-28"/>
+        </scene>
+        <!--Timelines View Controller-->
+        <scene sceneID="Ooj-wY-VOO">
+            <objects>
+                <viewController id="XRM-gv-OfH" customClass="TimelinesViewController" customModule="Mastonaut" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="ud1-aN-f3q">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <stackView distribution="fillEqually" orientation="horizontal" alignment="top" spacing="2" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qul-Uv-m5U">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="qul-Uv-m5U" secondAttribute="trailing" id="ZYW-jI-Igu"/>
+                            <constraint firstItem="qul-Uv-m5U" firstAttribute="top" secondItem="ud1-aN-f3q" secondAttribute="top" id="brd-KX-dWP"/>
+                            <constraint firstItem="qul-Uv-m5U" firstAttribute="leading" secondItem="ud1-aN-f3q" secondAttribute="leading" id="bx6-Gz-mXp"/>
+                            <constraint firstAttribute="bottom" secondItem="qul-Uv-m5U" secondAttribute="bottom" id="pEV-G6-tBo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="stackView" destination="qul-Uv-m5U" id="Vcb-ap-VOw"/>
+                    </connections>
+                </viewController>
+                <customObject id="sp7-yC-rTW" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1306" y="-28"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="s9U-Rt-Azp">
+            <objects>
+                <customObject id="hz0-dV-gUE" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <viewController id="Giv-Ao-Iyi" sceneMemberID="viewController">
+                    <view key="view" id="fe7-B9-fZB">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="eyA-4V-rZn">
+                                <rect key="frame" x="18" y="126" width="414" height="48"/>
+                                <textFieldCell key="cell" alignment="center" id="Ql1-zu-JeB">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <string key="title">This is here because NSSplitViewController doesn't like being initialized with a single child. We immediately remove and discard this view controller in TimelinesSplitViewController.viewDidLoad()</string>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="eyA-4V-rZn" secondAttribute="trailing" constant="20" id="3h2-m4-a2V"/>
+                            <constraint firstItem="eyA-4V-rZn" firstAttribute="centerY" secondItem="fe7-B9-fZB" secondAttribute="centerY" id="nhG-fi-8t4"/>
+                            <constraint firstItem="eyA-4V-rZn" firstAttribute="leading" secondItem="fe7-B9-fZB" secondAttribute="leading" constant="20" id="vuF-Kb-De4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1306" y="496"/>
+        </scene>
+    </scenes>
+</document>

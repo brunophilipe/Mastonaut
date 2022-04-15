@@ -1,0 +1,6 @@
+framework module MastodonKit {
+  umbrella header "MastodonKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

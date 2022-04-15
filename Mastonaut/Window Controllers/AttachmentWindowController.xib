@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16097" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.AVKitIBPlugin" version="16097"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AttachmentWindowController" customModule="Mastonaut" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonNext" destination="f2E-lZ-PqL" id="Zc3-fb-We4"/>
+                <outlet property="buttonPrevious" destination="XDk-LK-MyC" id="9zm-NP-XBV"/>
+                <outlet property="hoverView" destination="abS-sQ-ah9" id="8Cj-x5-s6J"/>
+                <outlet property="imageView" destination="pRN-xj-C5o" id="e2H-YT-d39"/>
+                <outlet property="progressIndicator" destination="4eT-o3-VFV" id="79K-P2-gXN"/>
+                <outlet property="shareButton" destination="eDD-p4-DE9" id="KFQ-Ds-Wzn"/>
+                <outlet property="shareMenu" destination="Q5E-t9-TFg" id="L3s-a3-H0g"/>
+                <outlet property="shareShadowView" destination="KJG-g4-TRP" id="EmF-HZ-BDS"/>
+                <outlet property="videoPlayerView" destination="zjN-NI-twc" id="AeS-3q-7SW"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" deferred="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="utilityWindow" tabbingMode="disallowed" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="F0z-JX-Cv5" customClass="TransientWindow" customModule="Mastonaut" customModuleProvider="target">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES" fullSizeContentView="YES"/>
+            <windowCollectionBehavior key="collectionBehavior" moveToActiveSpace="YES" transient="YES" participatesInCycle="YES" fullScreenAuxiliary="YES" fullScreenDisallowsTiling="YES"/>
+            <rect key="contentRect" x="474" y="323" width="400" height="270"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1440"/>
+            <view key="contentView" wantsLayer="YES" id="se5-gp-TjO" customClass="BackgroundView" customModule="CoreTootin">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="270"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="abS-sQ-ah9" customClass="CallbackHoverView" customModule="CoreTootin">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="270"/>
+                    </customView>
+                    <avPlayerView controlsStyle="floating" showsFullScreenToggleButton="YES" showsSharingServiceButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zjN-NI-twc">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="270"/>
+                    </avPlayerView>
+                    <imageView horizontalHuggingPriority="251" horizontalCompressionResistancePriority="251" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="pRN-xj-C5o" customClass="DraggingImageView" customModule="Mastonaut" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="270"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="missing" id="Myp-vn-52g"/>
+                        <connections>
+                            <outlet property="menu" destination="Q5E-t9-TFg" id="5zD-ba-J9D"/>
+                        </connections>
+                    </imageView>
+                    <progressIndicator hidden="YES" wantsLayer="YES" maxValue="100" controlSize="small" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="4eT-o3-VFV">
+                        <rect key="frame" x="-3" y="263" width="406" height="12"/>
+                    </progressIndicator>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="XDk-LK-MyC">
+                        <rect key="frame" x="0.0" y="103" width="30" height="65"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="65" id="AAP-Ya-Xie"/>
+                            <constraint firstAttribute="width" constant="30" id="SAh-fL-fFF"/>
+                        </constraints>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="arrow_prev" imagePosition="only" alignment="center" alternateImage="arrow_prev_active" state="on" inset="2" id="pjc-2n-xtt">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent"></string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="previousAttachment:" target="-2" id="TbY-rt-hvf"/>
+                        </connections>
+                    </button>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="f2E-lZ-PqL">
+                        <rect key="frame" x="370" y="103" width="30" height="65"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="Ae2-bn-h7I"/>
+                            <constraint firstAttribute="height" constant="65" id="zIT-tx-05I"/>
+                        </constraints>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="arrow_next" imagePosition="only" alignment="center" alternateImage="arrow_next_active" inset="2" id="w8Y-1i-P1l">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent"></string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="nextAttachment:" target="-2" id="kqy-j3-oxm"/>
+                        </connections>
+                    </button>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KJG-g4-TRP">
+                        <rect key="frame" x="9" y="10" width="21" height="26"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="share_shadow" id="UVt-wT-cHP"/>
+                    </imageView>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="eDD-p4-DE9">
+                        <rect key="frame" x="12" y="12" width="15" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="Xbd-gn-fHM"/>
+                            <constraint firstAttribute="width" secondItem="eDD-p4-DE9" secondAttribute="height" multiplier="11:16" id="nec-dX-IV6"/>
+                        </constraints>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSShareTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="LWE-le-WrQ">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <color key="contentTintColor" red="1" green="0.99997597932815552" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <connections>
+                            <action selector="share:" target="-2" id="oQf-pr-Nvs"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="zjN-NI-twc" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="0TR-6t-82c"/>
+                    <constraint firstItem="abS-sQ-ah9" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="14R-9M-yEN"/>
+                    <constraint firstItem="4eT-o3-VFV" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="-3" id="9wv-UG-2lU"/>
+                    <constraint firstAttribute="bottom" secondItem="abS-sQ-ah9" secondAttribute="bottom" id="B5Y-Ah-W2x"/>
+                    <constraint firstAttribute="bottom" secondItem="pRN-xj-C5o" secondAttribute="bottom" id="FHa-jb-g03"/>
+                    <constraint firstItem="XDk-LK-MyC" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="Fzp-i4-dtc"/>
+                    <constraint firstAttribute="trailing" secondItem="pRN-xj-C5o" secondAttribute="trailing" id="Qa2-43-qDM"/>
+                    <constraint firstAttribute="bottom" secondItem="zjN-NI-twc" secondAttribute="bottom" id="RKm-EG-7nM"/>
+                    <constraint firstAttribute="trailing" secondItem="f2E-lZ-PqL" secondAttribute="trailing" id="Tuj-M5-3gj"/>
+                    <constraint firstItem="XDk-LK-MyC" firstAttribute="centerY" secondItem="se5-gp-TjO" secondAttribute="centerY" id="Ucm-h3-20L"/>
+                    <constraint firstItem="eDD-p4-DE9" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="12" id="WYZ-JB-x3Z"/>
+                    <constraint firstItem="pRN-xj-C5o" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="bIg-ce-ydT"/>
+                    <constraint firstItem="KJG-g4-TRP" firstAttribute="centerY" secondItem="eDD-p4-DE9" secondAttribute="centerY" id="coG-4v-lNw"/>
+                    <constraint firstAttribute="trailing" secondItem="abS-sQ-ah9" secondAttribute="trailing" id="jc1-FW-jMi"/>
+                    <constraint firstAttribute="trailing" secondItem="4eT-o3-VFV" secondAttribute="trailing" constant="-3" id="jlL-ly-xyN"/>
+                    <constraint firstAttribute="trailing" secondItem="zjN-NI-twc" secondAttribute="trailing" id="kLb-R7-968"/>
+                    <constraint firstItem="zjN-NI-twc" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="llV-rp-Rqu"/>
+                    <constraint firstItem="4eT-o3-VFV" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="-5" id="pK0-ff-QI5"/>
+                    <constraint firstItem="abS-sQ-ah9" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="qOj-Q1-S9o"/>
+                    <constraint firstItem="f2E-lZ-PqL" firstAttribute="centerY" secondItem="se5-gp-TjO" secondAttribute="centerY" id="uvj-Br-fb3"/>
+                    <constraint firstItem="pRN-xj-C5o" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="vJr-zS-RL8"/>
+                    <constraint firstAttribute="bottom" secondItem="eDD-p4-DE9" secondAttribute="bottom" constant="12" id="vO7-fK-rdf"/>
+                    <constraint firstItem="KJG-g4-TRP" firstAttribute="centerX" secondItem="eDD-p4-DE9" secondAttribute="centerX" id="vUY-hd-UzJ"/>
+                </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                        <color key="value" name="shadowColor" catalog="System" colorSpace="catalog"/>
+                    </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="TXF-e6-sBR"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="158"/>
+        </window>
+        <menu id="Q5E-t9-TFg">
+            <items>
+                <menuItem title="Save Image to “Downloads”" id="2da-e1-kap">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="saveToDownloads:" target="-2" id="fW0-zI-sGN"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Save Image As…" id="Xva-DX-Hex">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="saveToLocation:" target="-2" id="tPa-c8-onz"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="nwy-ZG-9ML"/>
+                <menuItem title="Copy Image Address" id="3va-eT-j1I">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="copyImageAddress:" target="-2" id="KGt-S0-3iR"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Copy Image" id="MEj-6A-pvR">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="copyImage:" target="-2" id="e5W-0T-hbI"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="Zmk-U8-IyM"/>
+                <menuItem title="Share" tag="1000" id="69r-uu-2HC">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="TQQ-1l-NpW"/>
+                <menuItem title="Open in Browser" id="NO7-gU-1KU">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openInBrowser:" target="-2" id="Ko1-LU-4En"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="118" y="508"/>
+        </menu>
+    </objects>
+    <resources>
+        <image name="NSShareTemplate" width="11" height="16"/>
+        <image name="arrow_next" width="15" height="35"/>
+        <image name="arrow_next_active" width="15" height="35"/>
+        <image name="arrow_prev" width="15" height="35"/>
+        <image name="arrow_prev_active" width="15" height="35"/>
+        <image name="missing" width="400" height="400"/>
+        <image name="share_shadow" width="21" height="26"/>
+    </resources>
+</document>
